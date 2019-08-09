@@ -1,0 +1,43 @@
+# maven ignore
+target/
+
+# maven ignore for frontend engineer
+src/main/webapp/WEB-INF/classes/
+src/main/webapp/WEB-INF/lib/
+
+*.war
+*.zip
+*.tar
+*.tar.gz
+*.xml.versionsBackup
+
+# maven ignore for frontend engineer
+src/main/webapp/WEB-INF/classes/
+src/main/webapp/WEB-INF/lib/
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# temp ignore
+*.doc
+*.log
+*.requestCache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+lib/
+classes/
+.factorypath

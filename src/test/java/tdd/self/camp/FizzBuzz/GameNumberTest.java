@@ -54,9 +54,21 @@ public class GameNumberTest {
         assertGameNumber(15, FIZZBUZZ);
     }
 
+    @Test
+    public void test_say_contail_three(){
+        assertGameNumber(52,BUZZ);
+    }
+
+    @Test
+    public void test_say_contain_five(){
+        assertGameNumber(34, FIZZ);
+    }
+
 
     private void assertGameNumber(int sayNumber, String exceptWord) {
         GameNumber gameNumber = new GameNumber(sayNumber);
         assertThat(gameNumber.say(), is(exceptWord));
     }
+
+
 }

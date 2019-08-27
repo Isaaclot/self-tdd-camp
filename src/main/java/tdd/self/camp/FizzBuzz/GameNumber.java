@@ -14,20 +14,20 @@ public class GameNumber {
     }
 
     public String say() {
-        if (isDiviable(15) ) {
+        if (isDiviable(15)) {
             return "fizzbuzz";
         }
         if (isDiviable(3) || isContains("3")) {
             return "fizz";
         }
-        if (isDiviable(5) || isContains("5"))  {
+        if (isDiviable(5) || isContains("5")) {
             return "buzz";
         }
         return number + "";
     }
 
     private boolean isContains(String containVal) {
-        return (number+"").contains(containVal);
+        return (number + "").contains(containVal);
     }
 
     private boolean isDiviable(int base) {

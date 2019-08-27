@@ -55,12 +55,12 @@ public class GameNumberTest {
     }
 
     @Test
-    public void test_say_contail_three(){
-        assertGameNumber(52,BUZZ);
+    public void test_say_contail_three() {
+        assertGameNumber(52, BUZZ);
     }
 
     @Test
-    public void test_say_contain_five(){
+    public void test_say_contain_five() {
         assertGameNumber(34, FIZZ);
     }
 

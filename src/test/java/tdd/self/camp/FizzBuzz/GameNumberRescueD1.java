@@ -11,7 +11,7 @@ import org.junit.Test;
  * 这部分自己独立思考的地方很少，导致重新写的时候，还需要再去思考如何重构;
  * 针对这个问题，在需要重构代码的时候，能改进的是对重构代码的坏味道快速识别，能快速识别哪些代码需要重构，哪些代码有坏味道，
  */
-public class GameNumberRescue {
+public class GameNumberRescueD1 {
     @Test
     public void say_one() {
         Assert.assertTrue("1".equals(GameRescue.say(1)));

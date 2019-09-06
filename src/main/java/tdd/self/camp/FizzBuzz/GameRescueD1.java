@@ -5,7 +5,7 @@ package tdd.self.camp.FizzBuzz;
  * @date 2019/9/5 2:06 PM
  * @description
  */
-public class GameRescue {
+public class GameRescueD1 {
 
     public static final String FIZZ = "fizz";
     public static final String BUZZ = "buzz";

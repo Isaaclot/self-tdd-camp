@@ -1,5 +1,8 @@
 package tdd.self.camp.args;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 项目介绍
  * 我们经常会遇到需要解析命令行参数的场景。如果没有趁手的工具，我们可以自己写一个，自己想办法处理传给main函数的参数。
@@ -16,9 +19,34 @@ package tdd.self.camp.args;
  * @author Nut
  * @date 2019/8/26 7:02 PM
  */
-public class ArgsMissionOne {
+public class ArgsMissionSchemeOne {
 
 
+    private static Map<String, String> scheme = new HashMap<>();
+
+    public ArgsMissionSchemeOne(String command) {
+        this.parseScheme(command);
+    }
+
+
+    public String getVal(String key) {
+        return null == scheme ? "" : scheme.get(key);
+    }
+
+    public Map<String, String> getScheme() {
+        return scheme;
+    }
+
+    private void parseScheme(String orCommand) {
+        String[] commands = orCommand.split("-");
+        for (int i = 0; i < commands.length; i++) {
+            String singleCmd = commands[i];
+            if (singleCmd.length() == 0) continue;
+            String[] vacs = singleCmd.split(" ");
+            String val = vacs.length > 1 ? vacs[1] : "true";
+            scheme.put("-" + vacs[0].trim(), val.trim());
+        }
+    }
 }
 
 

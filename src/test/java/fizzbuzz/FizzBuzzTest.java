@@ -47,5 +47,16 @@ public class FizzBuzzTest {
         FizzBuzzGame game = new FizzBuzzGame();
         assertThat(game.say(10), is("buzz"));
     }
+    @Test
+    public void test_say_num_13_fizz(){
+        FizzBuzzGame game = new FizzBuzzGame();
+        assertThat(game.say(13), is("fizz"));
+    }
+
+    @Test
+    public void test_say_52_buzz(){
+        FizzBuzzGame game = new FizzBuzzGame();
+        assertThat(game.say(52), is("buzz"));
+    }
 
 }

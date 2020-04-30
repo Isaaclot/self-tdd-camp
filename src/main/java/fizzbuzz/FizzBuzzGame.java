@@ -10,13 +10,17 @@ public class FizzBuzzGame {
 
     public String say(int num) {
         if (isDivive(num, 5) && isDivive(num, 3)) return fizz + buzz;
-        if (isDivive(num, 3)) {
+        if (isDivive(num, 3) || containTarget(num, 3)) {
             return fizz;
         }
-        if (isDivive(num, 5)) {
+        if (isDivive(num, 5) || containTarget(num, 5)) {
             return buzz;
         }
         return "" + num;
+    }
+
+    private boolean containTarget(int num, int target) {
+        return String.valueOf(num).contains(target + "");
     }
 
     private boolean isDivive(int num, int i) {

@@ -12,43 +12,36 @@ import static org.junit.Assert.assertThat;
 public class NumberGameTest {
     @Test
     public void test_say_1_return_1() {
-        NumberGame game = new NumberGame();
-        assertThat(game.say(1), is("1"));
+        assertThat(new NumberGame().say(1), is("1"));
     }
 
     @Test
     public void test_say_3_fizz() {
-        NumberGame ga = new NumberGame();
-        assertThat(ga.say(3), is("fizz"));
+        assertThat(new NumberGame().say(3), is("fizz"));
     }
 
     @Test
     public void test_say_5_buzz() {
-        NumberGame game = new NumberGame();
-        assertThat(game.say(5), is("buzz"));
+        assertThat(new NumberGame().say(5), is("buzz"));
     }
 
     @Test
     public void test_test_z5_fizzbuzz() {
-        NumberGame game = new NumberGame();
-        assertThat(game.say(15), is("fizzbuzz"));
+        assertThat(new NumberGame().say(15), is("fizzbuzz"));
     }
 
     @Test
     public void test_say_13_fizz() {
-        NumberGame ga = new NumberGame();
-        assertThat(ga.say(13), is("fizz"));
+        assertThat(new NumberGame().say(13), is("fizz"));
     }
 
     @Test
     public void test_say_52_buzz() {
-        NumberGame game = new NumberGame();
-        assertThat(game.say(52), is("buzz"));
+        assertThat(new NumberGame().say(52), is("buzz"));
     }
 
     @Test
     public void test_say_53_fizzbuzz() {
-        NumberGame g = new NumberGame();
-        assertThat(g.say(53), is("fizzbuzz"));
+        assertThat(new NumberGame().say(53), is("fizzbuzz"));
     }
 }

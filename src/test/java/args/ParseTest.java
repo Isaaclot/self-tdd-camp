@@ -6,6 +6,8 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
+ * 感受：用时40分钟，其中拆解任务花了十分钟
+ *
  * @author liangqian0723@gmail.com
  * @since 2020/5/10 12:01 AM
  */

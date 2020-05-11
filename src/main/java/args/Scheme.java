@@ -1,7 +1,6 @@
 package args;
 
 /**
- * @author liangqian0723@gmail.com
  * @since 2020/5/9 11:56 PM
  */
 public class Scheme {

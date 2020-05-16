@@ -6,10 +6,14 @@ package args;
  */
 public class SchemeUnit {
 
+
+    private final String flag;
     private String type;
 
-    public SchemeUnit(String type) {
-        this.type = type;
+    public SchemeUnit(String schemeText) {
+        this.flag = schemeText.split(":")[0];
+        this.type = schemeText.split(":")[1];
+
     }
 
     public Object getDefault() {
@@ -29,10 +33,14 @@ public class SchemeUnit {
         return type;
     }
 
+    public String getFlag() {
+        return flag;
+    }
+
     public Object parse(String value) {
         switch (type) {
             case "bool":
-                return Boolean.valueOf(value);
+                return (null == value || value.length() == 0) ? Boolean.FALSE : Boolean.valueOf(value);
             case "int":
                 return Integer.valueOf(value);
             case "string":

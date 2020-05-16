@@ -10,17 +10,21 @@ import java.util.Optional;
  * @since 2020/5/13 7:28 AM
  */
 public class Scheme {
-    private List<SchemeUnit> schemeUnitList;
+    private List<SchemeUnit> schemeUnitList = new ArrayList<>();
 
     public Scheme(String scheme) {
-        schemeUnitList = new ArrayList<>();
-        Arrays.asList(scheme.split(",")).forEach(s -> {
-            schemeUnitList.add(new SchemeUnit(s.split(":")[1]));
+        Arrays.stream(scheme.split(",")).filter(s-> s.length() != 0).forEach(s -> {
+            schemeUnitList.add(new SchemeUnit(s));
         });
 
     }
 
     public Object get(String type, String value) {
-        return schemeUnitList.stream().filter(s -> s.getType().equals(type)).findAny().orElseGet(null).parse(value);
+        return schemeUnitList
+                .stream()
+                .filter(s -> s.getFlag().equals(type))
+                .findAny()
+                .get()
+                .parse(value);
     }
 }

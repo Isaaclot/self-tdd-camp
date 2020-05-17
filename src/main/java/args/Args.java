@@ -19,9 +19,18 @@ public class Args {
         this.commandText = commandText;
 
         for (int i = 0; i < commandText.length; i += 2) {
-            Argument argument = new Argument(commandText[i], commandText[i + 1]);
-            argumentList.add(argument);
+            String rawValue = commandText[i + 1];
+            String flag = commandText[i];
+            if (isDefaultRawValue(rawValue)) {
+                i--;
+                rawValue = "";
+            }
+            argumentList.add(new Argument(flag, rawValue));
         }
+    }
+
+    private boolean isDefaultRawValue(String rawValue) {
+        return rawValue.startsWith("-") && rawValue.charAt(1) > '9';
     }
 
     public int size() {

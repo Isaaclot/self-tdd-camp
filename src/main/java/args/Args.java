@@ -18,6 +18,10 @@ public class Args {
         this.schemeText = schemeText;
         this.commandText = commandText;
 
+        initArgumentList(commandText);
+    }
+
+    private void initArgumentList(String[] commandText) {
         for (int i = 0; i < commandText.length; i += 2) {
             String rawValue = commandText[i + 1];
             String flag = commandText[i];
